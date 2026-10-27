@@ -201,7 +201,8 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 /* Opiniones */
 .opi{background:var(--claro);color:var(--texto);padding-top:0}
-.opi-g{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:36px}
+.opi-g{grid-template-columns:repeat(2,1fr);margin-top:36px}
+@media (max-width:700px){.opi-g{grid-template-columns:1fr}}
 .opi-card{margin:0;background:#fff;border:1px solid #e1e3de;border-top:4px solid var(--verde);padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px}
 .opi-card .estrellas{font-family:var(--display);font-size:72px;line-height:.6;color:var(--verde);height:28px}
 .opi-card blockquote{margin:0;font-size:19px;line-height:1.5;font-weight:500}
@@ -368,6 +369,11 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <div class="estrellas" aria-hidden="true">“</div>
         <blockquote>Buen trabajo y rápido, conveniente en precio. Portón automatizado sin problemas.</blockquote>
         <figcaption><b>Patricio E.</b><span>Puente Alto · Portón automatizado</span></figcaption>
+      </figure>
+      <figure class="opi-card">
+        <div class="estrellas" aria-hidden="true">“</div>
+        <blockquote>Gracias por el trabajo, quedamos encantados con la reja.</blockquote>
+        <figcaption><b>Pedro</b><span>La Florida · Reja</span></figcaption>
       </figure>
     </div>
   </div>
