@@ -140,6 +140,25 @@ nav a:hover{color:var(--blanco)}
 .nota{margin-top:26px;font-size:13px;color:var(--gris);max-width:90ch}
 .rev-acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 
+/* Vista previa de informes */
+.prev{margin-top:56px}
+.prev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px}
+.prev-head h3{font-size:40px;margin:0}
+.prev-head h3 span{color:var(--verde2)}
+.prev-head p{color:var(--gris);margin:6px 0 0;max-width:60ch;font-size:15px}
+.prev-tabs{display:flex;gap:6px}
+.prev-tabs button{font:700 14px var(--body);padding:11px 18px;border:2px solid var(--linea);background:transparent;color:var(--blanco);cursor:pointer}
+.prev-tabs button[aria-selected=true]{background:var(--verde);border-color:var(--verde)}
+.prev-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:22px 0 14px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.prev-track[hidden]{display:none}
+.prev-track figure{margin:0;flex:0 0 min(78vw,330px);scroll-snap-align:start}
+.prev-track img{width:100%;height:auto;aspect-ratio:910/1287;object-fit:cover;display:block;box-shadow:0 10px 30px rgba(0,0,0,.45);-webkit-user-drag:none;user-select:none}
+.prev-track figcaption{font-size:13px;color:#cfd2d6;margin-top:10px}
+.prev-track figcaption b{color:var(--verde2);font-weight:700;margin-right:6px}
+.prev-nav{display:flex;gap:8px}
+.prev-nav button{width:44px;height:44px;border:2px solid var(--linea);background:transparent;color:var(--blanco);font-size:20px;cursor:pointer}
+.prev-nav button:hover{border-color:var(--verde2)}
+
 /* Reciclaje */
 .eco{background:var(--verde)}
 .eco .c{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
@@ -369,6 +388,23 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <p class="ideal">Ideal para edificios de 2 a 5 años que aún pueden reclamar garantías.</p>
       </article>
     </div>
+
+    <div class="prev" id="informes">
+      <div class="prev-head">
+        <div>
+          <p class="eyebrow">Lo que recibe la administración</p>
+          <h3>Vista previa <span>de los informes</span></h3>
+          <p>Páginas de un informe tipo con datos ilustrativos. Desliza para ver más.</p>
+        </div>
+        <div class="prev-tabs" role="tablist">
+          <button role="tab" aria-selected="true" aria-controls="prev-est">Estándar</button>
+          <button role="tab" aria-selected="false" aria-controls="prev-ddt">Premium (DDT)</button>
+        </div>
+      </div>
+      <div class="prev-track" id="prev-est" role="tabpanel"><figure><img src="prev-est-1.jpg" alt="Vista previa del informe Estándar: Portada" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>1/4</b>Portada</figcaption></figure><figure><img src="prev-est-2.jpg" alt="Vista previa del informe Estándar: Nota global y tarjetas clave" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>2/4</b>Nota global y tarjetas clave</figcaption></figure><figure><img src="prev-est-4.jpg" alt="Vista previa del informe Estándar: Ficha por recinto: riesgo y qué pasa si no se atiende" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>3/4</b>Ficha por recinto: riesgo y qué pasa si no se atiende</figcaption></figure><figure><img src="prev-est-8.jpg" alt="Vista previa del informe Estándar: Anexo fotográfico" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>4/4</b>Anexo fotográfico</figcaption></figure></div>
+      <div class="prev-track" id="prev-ddt" role="tabpanel" hidden><figure><img src="prev-ddt-1.jpg" alt="Vista previa del informe Premium: Portada" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>1/5</b>Portada</figcaption></figure><figure><img src="prev-ddt-3.jpg" alt="Vista previa del informe Premium: Resumen ejecutivo con tarjetas clave" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>2/5</b>Resumen ejecutivo con tarjetas clave</figcaption></figure><figure><img src="prev-ddt-15.jpg" alt="Vista previa del informe Premium: Matriz de riesgos" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>3/5</b>Matriz de riesgos</figcaption></figure><figure><img src="prev-ddt-17.jpg" alt="Vista previa del informe Premium: Presupuesto por partida: OPEX y CAPEX" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>4/5</b>Presupuesto por partida: OPEX y CAPEX</figcaption></figure><figure><img src="prev-ddt-20.jpg" alt="Vista previa del informe Premium: Proyección a 10 años con y sin plan" loading="lazy" width="910" height="1287" draggable="false"><figcaption><b>5/5</b>Proyección a 10 años con y sin plan</figcaption></figure></div>
+      <div class="prev-nav"><button type="button" aria-label="Anterior" data-d="-1">&#8592;</button><button type="button" aria-label="Siguiente" data-d="1">&#8594;</button></div>
+    </div>
     <p class="nota">La revisión es una inspección visual y de funcionamiento, con un informe de observaciones; no reemplaza una certificación. Los temas de gas y electricidad se derivan a un instalador autorizado SEC.</p>
     <div class="rev-acc">
       <a class="btn" href="brochure-galvez.pdf" download>Descargar brochure (PDF)</a>
@@ -481,6 +517,12 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <footer><div class="c"><span>© <span id="anio">2026</span> Galvez y Partners SpA</span><span>Estructuras metálicas y mixtas · Revisiones preventivas</span></div></footer>
 
 <a class="wsp" href="https://wa.me/56957014324?text=Hola%2C%20quiero%20cotizar%20un%20trabajo" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3Z"/></svg></a>
+<script>
+(function(){var tabs=document.querySelectorAll('.prev-tabs button');
+tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===b);document.getElementById(x.getAttribute('aria-controls')).hidden=x!==b;});});});
+document.querySelectorAll('.prev-nav button').forEach(function(b){b.addEventListener('click',function(){var t=document.querySelector('.prev-track:not([hidden])');var f=t.querySelector('figure');t.scrollBy({left:(+b.dataset.d)*(f.offsetWidth+16),behavior:'smooth'});});});
+document.querySelectorAll('.prev-track img').forEach(function(i){i.addEventListener('contextmenu',function(e){e.preventDefault();});});})();
+</script>
 <script>document.getElementById('anio').textContent=new Date().getFullYear();</script>
 </body>
 </html>
