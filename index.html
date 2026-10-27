@@ -198,6 +198,16 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .beneficios b{font-family:var(--display);font-weight:400;font-size:28px;letter-spacing:.5px;line-height:1}
 .beneficios span{color:var(--gris);font-size:15px}
 @media (max-width:860px){.beneficios{grid-template-columns:1fr}}
+
+/* Opiniones */
+.opi{background:var(--claro);color:var(--texto);padding-top:0}
+.opi-g{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:36px}
+.opi-card{margin:0;background:#fff;border:1px solid #e1e3de;border-top:4px solid var(--verde);padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px}
+.opi-card .estrellas{font-family:var(--display);font-size:72px;line-height:.6;color:var(--verde);height:28px}
+.opi-card blockquote{margin:0;font-size:19px;line-height:1.5;font-weight:500}
+.opi-card figcaption{display:flex;flex-direction:column;gap:2px;margin-top:auto}
+.opi-card figcaption b{font-weight:700}
+.opi-card figcaption span{font-size:14px;color:#55595f}
 </style>
 </head>
 <body>
@@ -338,6 +348,25 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   </div>
 </section>
 
+
+<section class="opi" id="opiniones">
+  <div class="c">
+    <p class="eyebrow" style="color:var(--verde)">Opiniones</p>
+    <h2>Lo que dicen <span style="color:var(--verde)">nuestros clientes</span></h2>
+    <div class="grid opi-g">
+      <figure class="opi-card">
+        <div class="estrellas" aria-hidden="true">“</div>
+        <blockquote>Me gustó mucho el resultado, te agradecemos mucho.</blockquote>
+        <figcaption><b>Giovana A.</b><span>Maipú · Portón corredera</span></figcaption>
+      </figure>
+      <figure class="opi-card">
+        <div class="estrellas" aria-hidden="true">“</div>
+        <blockquote>Trabajo excelente, muchas gracias.</blockquote>
+        <figcaption><b>Felipe S.</b><span>San Joaquín · Cambio de techumbre y hojalatería</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <section class="eco">
   <div class="c">
