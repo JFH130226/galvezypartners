@@ -212,6 +212,30 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .opi-cta{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#fff;border:1px solid #e1e3de;padding:22px 28px}
 .opi-cta p{margin:0;max-width:60ch;color:#3a3d42}
 .opi-cta b{color:var(--texto)}
+
+/* Gasto común */
+.gc{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;margin-top:48px;align-items:start}
+.gc h3{font-size:clamp(32px,4vw,44px)}
+.gc h3 span{color:var(--verde2)}
+.gc-txt>p{color:var(--gris);margin:14px 0 0}
+.gc ul{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:10px}
+.gc li{padding-left:18px;position:relative;color:#cfd2d6;font-size:15px}
+.gc li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--verde2)}
+.gc li b{color:#fff}
+.gc-caso{background:var(--panel);border:1px solid var(--linea);border-top:3px solid var(--verde2);padding:26px;display:flex;flex-direction:column;gap:10px}
+.gc-k{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--verde2)}
+.gc-caso>p{margin:0;color:var(--gris);font-size:15px}
+.gc-op{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:0 12px;padding:14px 16px}
+.gc-op span{font-weight:600}
+.gc-op b{font-family:var(--display);font-weight:400;font-size:34px;line-height:1}
+.gc-op small{grid-column:2;text-align:right;font-size:12px;color:var(--gris)}
+.gc-op.a{background:#1d2410;border-left:4px solid var(--verde2)}
+.gc-op.a b{color:var(--verde2)}
+.gc-op.b{background:var(--panel2);border-left:4px solid #6b6f75}
+.gc-ah{background:var(--verde);padding:12px 16px;font-weight:600}
+.gc-ah b{font-family:var(--display);font-weight:400;font-size:28px;margin-right:6px}
+.gc-n{font-size:12px;color:var(--gris)}
+@media (max-width:860px){.gc{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -303,6 +327,28 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <div><b>Fallas detectadas a tiempo</b><span>Antes de que se conviertan en una reparación de emergencia.</span></div>
       <div><b>Garantías aprovechadas</b><span>Identificamos lo que aún podría reclamarse a la inmobiliaria o al instalador.</span></div>
       <div><b>Respaldo para decidir</b><span>Un informe claro para el comité, el presupuesto anual y la asamblea.</span></div>
+    </div>
+
+    <div class="gc">
+      <div class="gc-txt">
+        <p class="eyebrow">Para cada residente</p>
+        <h3>Prevenir también se nota <span>en el gasto común</span></h3>
+        <p>Los gastos comunes se reparten según la prorrata de cada unidad. Cada reparación que se evita o se achica es un ahorro directo para cada departamento.</p>
+        <ul>
+          <li><b>Reparar antes de reemplazar:</b> sellos, empaquetaduras, rodamientos y pintura alargan la vida útil.</li>
+          <li><b>Usar las garantías vigentes:</b> si la falla está cubierta, no la paga la comunidad.</li>
+          <li><b>Evitar cuotas extraordinarias:</b> lo detectado a tiempo entra al gasto común ordinario.</li>
+          <li><b>Cortar consumos innecesarios:</b> fugas y equipos mal ajustados suben las cuentas comunes.</li>
+        </ul>
+      </div>
+      <div class="gc-caso">
+        <span class="gc-k">Caso típico · bomba de recirculación</span>
+        <p>Detectamos goteo en la empaquetadura. Dos caminos:</p>
+        <div class="gc-op a"><span>Mantener la empaquetadura</span><b>$2.250</b><small>por depto</small></div>
+        <div class="gc-op b"><span>Esperar y cambiar la bomba</span><b>$30.000</b><small>por depto</small></div>
+        <div class="gc-ah"><b>$27.750</b> menos por departamento en una sola falla</div>
+        <small class="gc-n">Valores ilustrativos para un edificio de 80 departamentos con igual prorrata. Los costos reales se detallan en cada informe.</small>
+      </div>
     </div>
 
     <div class="grid niveles">
