@@ -101,12 +101,13 @@ nav a:hover{color:var(--blanco)}
 .gal figure{margin:0;position:relative;overflow:hidden;background:#ddd;grid-column:span 4;aspect-ratio:4/3}
 .gal figure.alta{grid-row:span 2;aspect-ratio:auto}
 .gal figure.ancha{grid-column:span 8}
+.gal figure.full{grid-column:1/-1;aspect-ratio:20/9}
 .gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .gal figure:hover img{transform:scale(1.03)}
 .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 14px;background:linear-gradient(transparent,rgba(11,12,14,.85));color:#fff}
 .gal figcaption b{font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.5px;display:block;line-height:1}
 .gal figcaption span{font-size:13px;color:#d6d9dc}
-@media (max-width:860px){.gal{grid-template-columns:1fr 1fr}.gal figure,.gal figure.ancha{grid-column:span 1}.gal figure.alta{grid-row:span 1;aspect-ratio:4/3}}
+@media (max-width:860px){.gal{grid-template-columns:1fr 1fr}.gal figure,.gal figure.ancha{grid-column:span 1}.gal figure.full{grid-column:1/-1;aspect-ratio:16/9}.gal figure.alta{grid-row:span 1;aspect-ratio:4/3}}
 @media (max-width:520px){.gal{grid-template-columns:1fr}}
 .ad{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:56px;background:var(--negro)}
 .ad figure{margin:0;position:relative}
@@ -255,7 +256,7 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 <main>
 <section class="hero" id="inicio">
-  <img src="porton-portada.jpg" alt="Portón y cierre metálico de celosía horizontal negra, fabricado por Galvez y Partners" fetchpriority="high">
+  <img src="porton-portada.jpg" alt="Portón y cierre metálico de celosía horizontal negra en San Bernardo, fabricado por Galvez y Partners" fetchpriority="high">
   <div class="c">
     <p class="eyebrow">Estructuras metálicas y mixtas · Santiago</p>
     <h1>Transformamos tus espacios en <span>estructuras que duran</span></h1>
@@ -388,12 +389,18 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <figure><img src="pergola.jpg" alt="Pérgola metálica con techo de madera en un patio" loading="lazy"><figcaption><b>Pérgola metálica</b><span>Acero, madera e iluminación</span></figcaption></figure>
       <figure><img src="banca.jpg" alt="Banca de madera con patas metálicas en X" loading="lazy"><figcaption><b>Banca a medida</b><span>Patas metálicas en X</span></figcaption></figure>
       <figure><img src="reja.jpg" alt="Cierre perimetral con reja metálica blanca" loading="lazy"><figcaption><b>Cierre perimetral</b><span>Reja metálica</span></figcaption></figure>
+      <figure class="full"><img src="sanbernardo-celosia.jpg" alt="Portón y cierre de celosía metálica negra en San Bernardo" loading="lazy"><figcaption><b>Portón de celosía</b><span>San Bernardo · portón, puerta peatonal y cierre</span></figcaption></figure>
     </div>
     <div class="ad" aria-label="Antes y después de un portón metálico">
       <figure><img src="porton-antes.jpg" alt="Portón antiguo deteriorado antes del trabajo" loading="lazy"><span class="tag">Antes</span></figure>
       <figure><img src="porton-despues.jpg" alt="Portón metálico nuevo instalado" loading="lazy"><span class="tag v">Después</span></figure>
     </div>
     <p class="ad-txt"><b>Portón metálico:</b> reemplazo completo, fabricación e instalación.</p>
+    <div class="ad" aria-label="Antes y después de un portón corredera y cierre en La Florida">
+      <figure><img src="florida-antes.jpg" alt="Reja antigua con malla antes del trabajo en La Florida" loading="lazy"><span class="tag">Antes</span></figure>
+      <figure><img src="florida-despues.jpg" alt="Portón corredera y cierre con marco metálico y madera en La Florida" loading="lazy"><span class="tag v">Después</span></figure>
+    </div>
+    <p class="ad-txt"><b>Portón corredera y cierre · La Florida:</b> estructura metálica con revestimiento de madera, puerta peatonal y remate de seguridad.</p>
   </div>
 </section>
 
