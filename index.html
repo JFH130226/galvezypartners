@@ -140,6 +140,22 @@ nav a:hover{color:var(--blanco)}
 .nota{margin-top:26px;font-size:13px;color:var(--gris);max-width:90ch}
 .rev-acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 
+/* Secciones claras */
+.light{background:#fff;color:var(--texto)}
+.light .lead,.light .card p,.light .paso p{color:#55595f}
+.light h2 span,.light h3 span{color:var(--verde)}
+.light .eyebrow{color:var(--verde)}
+.light .card{background:var(--claro);border-color:#e1e3de}
+.light .card.destacada{border-color:var(--verde)}
+.light .paso::before{color:var(--verde)}
+.light .aud-card{background:var(--claro);border-color:#e1e3de;color:var(--texto)}
+.light .aud-card p{color:#55595f}
+.light .aud-card .aud-link{color:var(--verde)}
+.light .aud-card.dest{background:var(--negro);border-color:var(--verde2);color:var(--blanco)}
+.light .aud-card.dest p{color:#e3e5e8}
+.light .aud-card.dest .eyebrow,.light .aud-card.dest .aud-link,.light .aud-card.dest h2 span{color:var(--verde2)}
+.light .aud-card:hover{border-color:var(--verde)}
+
 /* Mantención vs revisión */
 .mvr{margin-top:56px}
 .mvr h3{font-size:40px;margin:0}
@@ -309,7 +325,7 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 <div class="franja"><div class="c"><span>Portones</span><span>Automatización</span><span>Pérgolas</span><span>Cierres y rejas</span><span>Barandas</span><span>Mobiliario exterior</span><span>Revisiones preventivas</span></div></div>
 
-<section class="aud" aria-label="Elige tu servicio">
+<section class="aud light" aria-label="Elige tu servicio">
   <div class="c grid aud-g">
     <a class="aud-card" href="#servicios">
       <span class="eyebrow">Para tu casa o negocio</span>
@@ -327,7 +343,7 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   </div>
 </section>
 
-<section id="servicios">
+<section id="servicios" class="light">
   <div class="c">
     <p class="eyebrow">Servicios</p>
     <h2>Lo que <span>hacemos</span></h2>
@@ -338,7 +354,7 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V5M9 21V5M14 21V5M19 21V5M2 9h20M2 17h20"/></svg></div><h3>Cierres, rejas y celosías</h3><p>Cierres perimetrales, protecciones de ventanas y celosías metálicas que dan seguridad y privacidad.</p></article>
       <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V10M19 20V10M3 10h18M9 10v10M14 10v10"/></svg></div><h3>Barandas</h3><p>Barandas para escaleras, balcones y terrazas, fabricadas e instaladas a la medida del lugar.</p></article>
       <article class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9h18M5 9l3 11M19 9l-3 11M8 20l8-11M16 20 8 9"/></svg></div><h3>Mobiliario exterior</h3><p>Bancas y mesas con patas metálicas y cubiertas de madera, hechas a pedido.</p></article>
-      <article class="card destacada"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/></svg></div><h3>Revisiones preventivas</h3><p>Inspección de recintos técnicos y espacios comunes para edificios y condominios, con informe de hallazgos.</p><p style="margin-top:12px"><a href="#revisiones" style="color:var(--verde2);font-weight:700">Ver niveles →</a></p></article>
+      <article class="card destacada"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/></svg></div><h3>Revisiones preventivas</h3><p>Inspección de recintos técnicos y espacios comunes para edificios y condominios, con informe de hallazgos.</p><p style="margin-top:12px"><a href="#revisiones" style="color:var(--verde);font-weight:700">Ver niveles →</a></p></article>
     </div>
   </div>
 </section>
@@ -523,7 +539,7 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   </div>
 </section>
 
-<section id="como">
+<section id="como" class="light">
   <div class="c">
     <p class="eyebrow">Cómo trabajamos</p>
     <h2>De la idea a la <span>instalación</span></h2>
