@@ -140,6 +140,43 @@ nav a:hover{color:var(--blanco)}
 .nota{margin-top:26px;font-size:13px;color:var(--gris);max-width:90ch}
 .rev-acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 
+/* Mantención vs revisión */
+.mvr{margin-top:56px}
+.mvr h3{font-size:40px;margin:0}
+.mvr h3 span{color:var(--verde2)}
+.mvr .frase{font-size:18px;color:#e3e5e8;max-width:70ch;margin:12px 0 0}
+.mvr-t{margin-top:24px;border:1px solid var(--linea)}
+.mvr-r{display:grid;grid-template-columns:150px 1fr 1fr;border-top:1px solid var(--linea)}
+.mvr-r:first-child{border-top:0}
+.mvr-r>div{padding:14px 18px;font-size:15px}
+.mvr-r .k{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gris);background:var(--panel)}
+.mvr-r .m{color:#cfd2d6}
+.mvr-r .g{background:rgba(104,128,30,.14);border-left:3px solid var(--verde2)}
+.mvr-h>div{font-family:var(--display);font-size:24px;letter-spacing:.5px;padding-top:12px;padding-bottom:10px}
+.mvr-h .g{color:var(--verde2)}
+.mvr-x{margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mvr-x li{background:var(--panel);border:1px solid var(--linea);padding:14px 16px;font-size:14px;color:#cfd2d6}
+.mvr-x b{display:block;color:var(--blanco);margin-bottom:4px}
+@media (max-width:760px){.mvr-r{grid-template-columns:1fr 1fr}.mvr-r .k{grid-column:1/-1;padding:8px 14px}.mvr-h .k{display:none}.mvr-r>div{padding:12px 14px;font-size:14px}.mvr-x{grid-template-columns:1fr}.mvr-r.mvr-h>div{font-size:20px}}
+
+/* Despiece portón */
+.dsp{margin-top:56px}
+.dsp h3{font-size:40px;margin:0}
+.dsp h3 span{color:var(--verde2)}
+.dsp .lead{margin-top:10px}
+.dsp-fig{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin:24px 0 0;align-items:stretch}
+.dsp-fig img{width:100%;height:100%;object-fit:cover;display:block;border:1px solid var(--linea)}
+.dsp-fig figcaption{grid-column:1/-1;font-size:13px;color:var(--gris)}
+.dsp-l{margin:20px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.dsp-l li{display:grid;grid-template-columns:34px 1fr;gap:12px;background:var(--panel);border:1px solid var(--linea);padding:14px 16px}
+.dsp-l li.auto{border-color:#6b4a26}
+.dsp-l .n{width:30px;height:30px;border-radius:50%;background:var(--verde2);color:var(--negro);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+.dsp-l li.auto .n{background:#e67e22}
+.dsp-l b{display:block;font-size:15px;margin-bottom:4px}
+.dsp-l span{display:block;font-size:13.5px;color:#cfd2d6}
+.dsp-l em{display:block;font-style:normal;font-size:13.5px;color:#e8b07a;margin-top:4px}
+@media (max-width:860px){.dsp-fig{grid-template-columns:1fr}.dsp-l{grid-template-columns:1fr}}
+
 /* Vista previa de informes */
 .prev{margin-top:56px}
 .prev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px}
@@ -346,6 +383,37 @@ footer .c{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <div><b>Fallas detectadas a tiempo</b><span>Antes de que se conviertan en una reparación de emergencia.</span></div>
       <div><b>Garantías aprovechadas</b><span>Identificamos lo que aún podría reclamarse a la inmobiliaria o al instalador.</span></div>
       <div><b>Respaldo para decidir</b><span>Un informe claro para el comité, el presupuesto anual y la asamblea.</span></div>
+    </div>
+
+    <div class="mvr">
+      <p class="eyebrow">Mantención y revisión no son lo mismo</p>
+      <h3>La mantención cuida cada equipo. <span>La revisión mira el edificio completo.</span></h3>
+      <p class="frase">Le dice al comité cómo está el edificio y si las mantenciones están funcionando.</p>
+      <div class="mvr-t" role="table" aria-label="Diferencias entre mantención y revisión">
+        <div class="mvr-r mvr-h" role="row"><div class="k" role="columnheader"></div><div class="m" role="columnheader">Mantención</div><div class="g" role="columnheader">Revisión Galvez</div></div>
+        <div class="mvr-r" role="row"><div class="k" role="rowheader">Quién</div><div class="m">Un proveedor por especialidad: bombas, calderas, portón</div><div class="g">Un equipo independiente que mira todo el edificio</div></div>
+        <div class="mvr-r" role="row"><div class="k" role="rowheader">Qué hace</div><div class="m">Ejecuta: ajusta, cambia repuestos, lubrica</div><div class="g">Diagnostica: evalúa, mide, prioriza y propone</div></div>
+        <div class="mvr-r" role="row"><div class="k" role="rowheader">Alcance</div><div class="m">Su equipo, según su contrato</div><div class="g">Recintos técnicos, espacios comunes, documentos y garantías</div></div>
+        <div class="mvr-r" role="row"><div class="k" role="rowheader">Resultado</div><div class="m">Una orden de trabajo o registro de visita</div><div class="g">Un informe para el comité con nota, fotos, riesgos, costos y plan</div></div>
+        <div class="mvr-r" role="row"><div class="k" role="rowheader">Interés</div><div class="m">Encontrar trabajo para su contrato</div><div class="g">No vende la reparación: el comité decide con quién</div></div>
+      </div>
+      <ul class="mvr-x">
+        <li><b>Lo que queda entre contratos</b>Cierres, barandas, techumbres y shafts que no tienen mantenedor asignado.</li>
+        <li><b>Mantenciones contra manuales</b>Cruzamos los registros con los manuales del edificio y las garantías vigentes.</li>
+        <li><b>Todo en costos y prioridades</b>Para el presupuesto anual y la asamblea, sin cotización mezclada en el informe.</li>
+      </ul>
+    </div>
+
+    <div class="dsp" id="despiece">
+      <p class="eyebrow">Así revisamos un portón</p>
+      <h3>Despiece de un portón corredera <span>hecho por nosotros</span></h3>
+      <p class="lead">Conocemos cada pieza porque las fabricamos. En una revisión, cada componente tiene algo que mirar y una falla típica que conviene detectar antes de que pare el acceso.</p>
+      <figure class="dsp-fig">
+        <img src="porton-despiece.svg" alt="Esquema de un portón corredera con puerta peatonal y 10 componentes numerados" loading="lazy" width="820" height="400">
+        <img src="florida-despues.jpg" alt="Portón corredera con puerta peatonal fabricado por Galvez &amp; Partners en La Florida" loading="lazy">
+        <figcaption>Esquema ilustrativo basado en el portón corredera con puerta peatonal que fabricamos en La Florida.</figcaption>
+      </figure>
+      <ul class="dsp-l"><li><span class="n">1</span><div><b>Marco perimetral de acero</b><span>Soldaduras, escuadra y óxido en las uniones.</span><em>Falla típica: corrosión en la base y soldaduras fisuradas que deforman la hoja.</em></div></li><li><span class="n">2</span><div><b>Travesaños y revestimiento</b><span>Fijaciones, pernos y estado de la madera o plancha.</span><em>Falla típica: tablas sueltas, madera agrietada y pernos oxidados.</em></div></li><li><span class="n">3</span><div><b>Puntas antiescalamiento</b><span>Firmeza de cada punta y bordes.</span><em>Falla típica: puntas sueltas o dobladas que dejan de proteger.</em></div></li><li><span class="n">4</span><div><b>Puerta peatonal y cerradura</b><span>Bisagras, cierre y chapa.</span><em>Falla típica: descuadre que impide cerrar; chapa trabada.</em></div></li><li><span class="n">5</span><div><b>Ruedas y riel inferior</b><span>Rodamientos, riel limpio y nivelado.</span><em>Falla típica: rueda gastada o riel con tierra; el portón se traba y sobreexige al motor.</em></div></li><li><span class="n">6</span><div><b>Guía superior y rodillos</b><span>Holgura y fijación al pilar.</span><em>Falla típica: el portón se balancea o se sale de la guía, con riesgo de caída.</em></div></li><li><span class="n">7</span><div><b>Pilar y tope de cierre</b><span>Revisamos anclaje, aplomo y que el portón calce al cerrar.</span><em>Falla típica: pilar desaplomado; el cierre no calza y la chapa no traba.</em></div></li><li><span class="n">8</span><div><b>Terminación anticorrosiva</b><span>Pintura, puntos de óxido y sellos.</span><em>Falla típica: óxido que avanza desde la base y obliga a cambiar piezas.</em></div></li><li class="auto"><span class="n">9</span><div><b>Motor y cremallera · si está automatizado</b><span>Esfuerzo del motor, desgaste de dientes y finales de carrera.</span><em>Falla típica: motor forzado por ruedas o riel en mal estado; termina quemándose.</em></div></li><li class="auto"><span class="n">10</span><div><b>Fotoceldas y seguridad · si está automatizado</b><span>Probamos que el portón se detenga ante un obstáculo.</span><em>Falla típica: el portón no se detiene; riesgo para personas y vehículos.</em></div></li></ul>
     </div>
 
     <div class="gc">
